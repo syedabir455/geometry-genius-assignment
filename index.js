@@ -49,6 +49,16 @@ document.getElementById('btn-Parallelogram').addEventListener('click',function()
     const rhombusArea = 0.5 * parseFloat(firstDiagonal) * parseFloat(secondDiagonal);
  
     displayData(rhombus,rhombusArea);
+       
+ })
+ //pentagon part 
+ document.getElementById('btn-pentagon').addEventListener('click',function(){
+    const pentagon = document.getElementById('pentagon').innerText;
+    const pentagonSide = document.getElementById('pentagon-side').value;
+    const pentagonBase = document.getElementById('pentagon-base').value;
+    const pentagonArea = 0.5 * parseFloat(pentagonSide) * parseFloat(pentagonBase);
+ 
+    displayData(pentagon,pentagonArea);
     
  })
 
