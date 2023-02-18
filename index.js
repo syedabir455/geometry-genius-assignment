@@ -32,15 +32,15 @@ document.getElementById('btn-rectangle').addEventListener('click',function(){
    
 })
 
-// document.getElementById('btn-Parallelogram').addEventListener('click',function(){
-//     const parallelogram = document.getElementById('parallelogram').innerText;
-//     const base = document.getElementById('parallelogram-base').value;
-//     const height = document.getElementById('parallelogram-height').value;
-//     const parallelogramArea = parseFloat(base) * parseFloat(height);
+document.getElementById('btn-Parallelogram').addEventListener('click',function(){
+    const parallelogram = document.getElementById('parallelogram').innerText;
+    const base = document.getElementById('parallelogram-base').value;
+    const height = document.getElementById('parallelogram-height').value;
+    const parallelogramArea = parseFloat(base) * parseFloat(height);
  
-//     displayData(parallelogram,parallelogramArea);
+    displayData(parallelogram,parallelogramArea);
     
-//  })
+ })
  
 
 
