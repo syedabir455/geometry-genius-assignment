@@ -1,61 +1,63 @@
-function displayData(triangle,triangleArea){
-    const container = document.getElementById('table-container');
-    const tr = document.createElement('tr');
-    tr.innerHTML =`
-    <td>${1}</td>
-    <td>${triangle}</td>
-    <td>${triangleArea}</td>
-        
-    `
-    container.appendChild(tr);
-}
+let x = 0;
 // Triangle part 
 document.getElementById('btn-triangle').addEventListener('click',function(){
-    
+    x = x + 1;
     // get input field data using id 
-    const triangle = document.getElementById('triangle').innerText;
-    const base = document.getElementById('triangle-base').value;
-    const height = document.getElementById('triangle-height').value;
+    const triangle = getInnerText('triangle');
+    const base = getInputValue('triangle-base');
+    const height = getInputValue('triangle-height');
     
     const triangleArea = 0.5 * parseFloat(base) * parseFloat(height);
 displayData(triangle,triangleArea)
     
 })
 // rectangle part 
+
 document.getElementById('btn-rectangle').addEventListener('click',function(){
-   const rectangle = document.getElementById('rectangle').innerText;
-   const width = document.getElementById('rectangle-width').value;
-   const length = document.getElementById('rectangle-length').value;
+    x = x + 1;
+   const rectangle = getInnerText('rectangle');
+   const width = getInputValue('rectangle-width');
+   const length = getInputValue('rectangle-length');
+
    const rectangleArea = parseFloat(width) * parseFloat(length);
 
    displayData(rectangle,rectangleArea);
    
 })
 // parallelogram part 
+
 document.getElementById('btn-Parallelogram').addEventListener('click',function(){
-    const parallelogram = document.getElementById('parallelogram').innerText;
-    const base = document.getElementById('parallelogram-base').value;
-    const height = document.getElementById('parallelogram-height').value;
+    x = x + 1;
+    const parallelogram = getInnerText('parallelogram')
+    const base = getInputValue('parallelogram-base');
+    const height = getInputValue('parallelogram-height');
+
     const parallelogramArea = parseFloat(base) * parseFloat(height);
  
     displayData(parallelogram,parallelogramArea);
     
  })
 //  rhombus part 
+
  document.getElementById('btn-rhombus').addEventListener('click',function(){
-    const rhombus = document.getElementById('rhombus').innerText;
-    const firstDiagonal = document.getElementById('first-diagonal').value;
-    const secondDiagonal = document.getElementById('second-diagonal').value;
+    x = x + 1;
+    const rhombus = getInnerText('rhombus')
+    const firstDiagonal = getInputValue('first-diagonal');
+    const secondDiagonal = getInputValue('second-diagonal');
+
     const rhombusArea = 0.5 * parseFloat(firstDiagonal) * parseFloat(secondDiagonal);
  
     displayData(rhombus,rhombusArea);
        
  })
  //pentagon part 
+ 
  document.getElementById('btn-pentagon').addEventListener('click',function(){
-    const pentagon = document.getElementById('pentagon').innerText;
-    const pentagonSide = document.getElementById('pentagon-side').value;
-    const pentagonBase = document.getElementById('pentagon-base').value;
+    x = x + 1;
+    const pentagon = getInnerText('pentagon')
+    const pentagonSide = getInputValue('pentagon-side');
+    const pentagonBase = getInputValue('pentagon-base');
+
     const pentagonArea = 0.5 * parseFloat(pentagonSide) * parseFloat(pentagonBase);
  
     displayData(pentagon,pentagonArea);
@@ -63,11 +65,14 @@ document.getElementById('btn-Parallelogram').addEventListener('click',function()
  })
 
  //Ellipse part 
+ 
  document.getElementById('btn-ellipse').addEventListener('click',function(){
-    const ellipse = document.getElementById('ellipse').innerText;
+    x = x + 1;
+    const ellipse = getInnerText('ellipse')
     const pi = 3.1416;
     const firstAxis = document.getElementById('first-axis').value;
     const secondAxis = document.getElementById('second-axis').value;
+
     const ellipseAreaCalc = pi * parseFloat(firstAxis) * parseFloat(secondAxis);
     const ellipseArea = ellipseAreaCalc.toFixed(2);
  
@@ -75,7 +80,24 @@ document.getElementById('btn-Parallelogram').addEventListener('click',function()
     
  })
 
- document.getElementById('btn-blog').addEventListener('click',function(){
-    
- })
+ function displayData(triangle,triangleArea){
+    const container = document.getElementById('table-container');
+    const tr = document.createElement('tr');
+    tr.innerHTML =`
+    <td>${x}</td>
+    <td>${triangle}</td>
+    <td>${triangleArea}</td>
+        
+    `
+    container.appendChild(tr);
+}
 
+function getInputValue(id){
+const value = document.getElementById(id).value;
+return value;
+}
+
+function getInnerText(id){
+    const innerText = document.getElementById(id).innerText;
+    return innerText;
+}
