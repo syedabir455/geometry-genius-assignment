@@ -9,7 +9,7 @@ function displayData(triangle,triangleArea){
     `
     container.appendChild(tr);
 }
-
+// Triangle part 
 document.getElementById('btn-triangle').addEventListener('click',function(){
     
     // get input field data using id 
@@ -21,7 +21,7 @@ document.getElementById('btn-triangle').addEventListener('click',function(){
 displayData(triangle,triangleArea)
     
 })
-
+// rectangle part 
 document.getElementById('btn-rectangle').addEventListener('click',function(){
    const rectangle = document.getElementById('rectangle').innerText;
    const width = document.getElementById('rectangle-width').value;
@@ -31,7 +31,7 @@ document.getElementById('btn-rectangle').addEventListener('click',function(){
    displayData(rectangle,rectangleArea);
    
 })
-
+// parallelogram part 
 document.getElementById('btn-Parallelogram').addEventListener('click',function(){
     const parallelogram = document.getElementById('parallelogram').innerText;
     const base = document.getElementById('parallelogram-base').value;
@@ -41,6 +41,14 @@ document.getElementById('btn-Parallelogram').addEventListener('click',function()
     displayData(parallelogram,parallelogramArea);
     
  })
+//  rhombus part 
+ document.getElementById('btn-rhombus').addEventListener('click',function(){
+    const rhombus = document.getElementById('rhombus').innerText;
+    const firstDiagonal = document.getElementById('first-diagonal').value;
+    const secondDiagonal = document.getElementById('second-diagonal').value;
+    const rhombusArea = 0.5 * parseFloat(firstDiagonal) * parseFloat(secondDiagonal);
  
-
+    displayData(rhombus,rhombusArea);
+    
+ })
 
