@@ -22,12 +22,12 @@
             </div>
 
             <div class="navbar-end">
-                <a class="bg-sky-400 px-8 py-2 rounded">Blog</a>
+                <button class="bg-sky-400 px-8 py-2 rounded">Blog</button>
             </div>
         </div>
     </header>
     <!-- main section -->
-    <main class="mt-12">
+    <main class="my-12">
         <section class="lg:px-8 flex flex-col md:flex-row lg:flex-row gap-8 ">
             <div class="geometry-part w-full md:w-[70%] lg:w-[75%] mt-5 grid md:grid-cols-2 lg:grid-cols-3 gap-6 ml-5 ">
                 <!-- Triangle  -->
@@ -36,18 +36,16 @@
                       <img src="./images/triangle.png"  class="rounded-xl" />
                     </figure>
                     <div class="card-body items-center text-center">
-                      <h2 class="card-title">Triangle</h2>
-                      <p>Area(A) = 0.5 <span>&#215;</span>
-                        b <span>&#215;</span>
-                        h</p>
+                      <h2 id="triangle" class="card-title">Triangle</h2>
+                      <p>Area(A) = 0.5 &#215; b &#215; h</p>
                       <div class="flex">
-                        <input class="w-14 bg-gray-200 rounded px-2" type="text" placeholder="b">
-                        <p class="px-2">cm</p>
-                        <input class="w-14 bg-gray-200 rounded px-2" type="text" placeholder="h">
+                        <input id="triangle-base" class="w-14 bg-gray-200 rounded px-2" type="text" placeholder="b">
+                        <p id="" class="px-2">cm</p>
+                        <input id="triangle-height" class="w-14 bg-gray-200 rounded px-2" type="text" placeholder="h">
                         <p class="px-2">cm</p>
                     </div>
                       <div class="card-actions mt-8">
-                        <button class="btn btn-info w-52">Calculate</button>
+                        <button id="btn-triangle" class="btn btn-info w-52">Calculate</button>
                       </div>
                     </div>
                   </div>
@@ -58,7 +56,7 @@
                     </figure>
                     <div class="card-body items-center text-center">
                       <h2 class="card-title">Rectangle</h2>
-                      <p>Area(A) = w <span>&#215;</span>l</p>
+                      <p>Area(A) = w &#215; l</p>
                       <div class="flex">
                         <input class="w-14 bg-gray-200 rounded px-2" type="text" placeholder="w">
                         <p class="px-2">cm</p>
@@ -77,8 +75,8 @@
                     </figure>
                     <div class="card-body items-center text-center">
                       <h2 class="card-title">Parallelogram</h2>
-                      <p>Area(A) = 0.5 <span>&#215;</span>
-                        b <span>&#215;</span>
+                      <p>Area(A) = 0.5 &#215;
+                        b &#215;
                         h</p>
                         <p>b =10cm , h =12cm</p>
                       <div class="card-actions mt-8">
@@ -94,7 +92,7 @@
                     </figure>
                     <div class="card-body items-center text-center">
                       <h2 class="card-title">Rhombus</h2>
-                      <p>Area(A) = 0.5<span>&#215;</span>d<sub>1</sub><span>&#215;</span>d<sub>2</sub></p>
+                      <p>Area(A) = 0.5&#215;d<sub>1</sub>&#215;d<sub>2</sub></p>
                       <p>d<sub>1</sub>=16cm  &nbsp; d<sub>2</sub>=8cm</p>
                       <div class="card-actions mt-8">
                         <button class="btn btn-info w-52">Calculate</button>
@@ -108,7 +106,7 @@
                     </figure>
                     <div class="card-body items-center text-center">
                       <h2 class="card-title">Pentagon</h2>
-                      <p>Area(A) = 0.5<span>&#215;</span>p<span>&#215;</span>b</p>
+                      <p>Area(A) = 0.5&#215;p&#215;b</p>
                       <p>p=6cm, b=10cm</p>
                       <div class="card-actions mt-8">
                         <button class="btn btn-info w-52">Calculate</button>
@@ -122,7 +120,7 @@
                     </figure>
                     <div class="card-body items-center text-center">
                       <h2 class="card-title">Ellipse</h2>
-                      <p>Area(A) = πab</p>
+                      <p>Area(A) = &pi;ab</p>
                       <p>p=10cm, b=4cm</p>
                       <div class="card-actions mt-8">
                         <button class="btn btn-info w-52 ">Calculate</button>
@@ -130,15 +128,35 @@
                     </div>
                   </div>
             </div>
+            <!-- Area Calculation Part -->
             <div class="calculation-part  w-full md:w-[25%] lg:w-[25%] mt-5 mx-auto mr-3">
                 <div class="card w-75 h-96 bg-base-100 shadow-xl border">
                     <h3 class="text-xl font-semibold text-center underline mt-5 
                     ">Area Calculation</h3>
+
+                    
+                      <table class="table w-24">
+                                              
+                        <tbody id="table-container">
+                          <!-- row 1 -->
+                          
+                          <!-- row 2 -->
+                          <tr>
+                            <th></th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                          </tr>
+                          
+                        </tbody>
+                      </table>
+                   
                     
                   </div>
             </div>
         </section>
     </main>
+    <script src="index.js"></script>
 </body>
 
 </html>
