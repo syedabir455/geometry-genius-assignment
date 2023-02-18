@@ -75,3 +75,7 @@ document.getElementById('btn-Parallelogram').addEventListener('click',function()
     
  })
 
+ document.getElementById('btn-blog').addEventListener('click',function(){
+    
+ })
+
