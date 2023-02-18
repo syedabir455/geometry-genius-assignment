@@ -15,6 +15,7 @@ document.getElementById('btn-triangle').addEventListener('click',function(){
     }
     else if(triangleArea<0){
         alert('Please provide a valid number');
+        return false;
     }
     else{
         triangleArea;
@@ -39,6 +40,7 @@ document.getElementById('btn-rectangle').addEventListener('click',function(){
 }
 else if(rectangleArea<0){
     alert('Please provide a valid number');
+    return false;
 }
 else{
     rectangleArea;
@@ -61,6 +63,7 @@ document.getElementById('btn-Parallelogram').addEventListener('click',function()
     }
     else if(parallelogramArea<0){
         alert('Please provide a valid number');
+        return false;
     }
     else{
         parallelogramArea;
@@ -83,6 +86,7 @@ document.getElementById('btn-Parallelogram').addEventListener('click',function()
     }
     else if(rhombusArea<0){
         alert('Please provide a valid number');
+        return false;
     }
     else{
         rhombusArea;
@@ -105,6 +109,7 @@ document.getElementById('btn-Parallelogram').addEventListener('click',function()
     }
     else if(pentagonArea<0){
         alert('Please provide a valid number');
+        return false;
     }
     else{
         pentagonArea;
@@ -130,6 +135,7 @@ document.getElementById('btn-Parallelogram').addEventListener('click',function()
     }
     else if(ellipseArea<0){
         alert('Please provide a valid number');
+        return false;
     }
     else{
         ellipseArea;
