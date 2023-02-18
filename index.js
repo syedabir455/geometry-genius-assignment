@@ -62,3 +62,16 @@ document.getElementById('btn-Parallelogram').addEventListener('click',function()
     
  })
 
+ //Ellipse part 
+ document.getElementById('btn-ellipse').addEventListener('click',function(){
+    const ellipse = document.getElementById('ellipse').innerText;
+    const pi = 3.1416;
+    const firstAxis = document.getElementById('first-axis').value;
+    const secondAxis = document.getElementById('second-axis').value;
+    const ellipseAreaCalc = pi * parseFloat(firstAxis) * parseFloat(secondAxis);
+    const ellipseArea = ellipseAreaCalc.toFixed(2);
+ 
+    displayData(ellipse,ellipseArea);
+    
+ })
+
