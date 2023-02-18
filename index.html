@@ -49,38 +49,44 @@
                       </div>
                     </div>
                   </div>
+
                   <!-- Rectangle  -->
                 <div class="card w-full bg-base-100 shadow-xl border">
                     <figure class="px-10 pt-10 mt-7">
                       <img src="./images/rectangle.png"  class="rounded-xl" />
                     </figure>
                     <div class="card-body items-center text-center">
-                      <h2 class="card-title">Rectangle</h2>
+                      <h2 id="rectangle" class="card-title">Rectangle</h2>
                       <p>Area(A) = w &#215; l</p>
                       <div class="flex">
-                        <input class="w-14 bg-gray-200 rounded px-2" type="text" placeholder="w">
+                        <input id="rectangle-width" class="w-14 bg-gray-200 rounded px-2" type="text" placeholder="w">
                         <p class="px-2">cm</p>
-                        <input class="w-14 bg-gray-200 rounded px-2" type="text" placeholder="l">
+                        <input id="rectangle-length" class="w-14 bg-gray-200 rounded px-2" type="text" placeholder="l">
                         <p class="px-2">cm</p>
                     </div>
                       <div class="card-actions mt-8">
-                        <button class="btn btn-info w-52">Calculate</button>
+                        <button id="btn-rectangle" class="btn btn-info w-52">Calculate</button>
                       </div>
                     </div>
                   </div>
+
                   <!-- Parallelogram -->
                 <div class="card w-full bg-base-100 shadow-xl border">
                     <figure class="px-10 pt-10 mt-10">
                       <img src="./images/parallelogram.png"  class="rounded-xl" />
                     </figure>
                     <div class="card-body items-center text-center">
-                      <h2 class="card-title">Parallelogram</h2>
-                      <p>Area(A) = 0.5 &#215;
-                        b &#215;
-                        h</p>
+                      <h2 id="parallelogram" class="card-title">Parallelogram</h2>
+                      <p>Area(A) =b &#215; h</p>
                         <p>b =10cm , h =12cm</p>
+                        <div class="flex">
+                          <input id="parallelogram-base" class="w-14 bg-gray-200 rounded px-2" type="text" placeholder="b">
+                          <p id="" class="px-2">cm</p>
+                          <input id="parallelogram-height" class="w-14 bg-gray-200 rounded px-2" type="text" placeholder="h">
+                          <p class="px-2">cm</p>
+                      </div>
                       <div class="card-actions mt-8">
-                        <button class="btn btn-info w-52">Calculate</button>
+                        <button id="btn-Parallelogram" class="btn btn-info w-52">Calculate</button>
                       </div>
                     </div>
                   </div>
@@ -94,8 +100,14 @@
                       <h2 class="card-title">Rhombus</h2>
                       <p>Area(A) = 0.5&#215;d<sub>1</sub>&#215;d<sub>2</sub></p>
                       <p>d<sub>1</sub>=16cm  &nbsp; d<sub>2</sub>=8cm</p>
+                      <div class="flex">
+                        <input id="first-diagonal" class="w-14 bg-gray-200 rounded px-2" type="text" placeholder=d1>
+                        <p id="second-diagonal" class="px-2">cm</p>
+                        <input id="" class="w-14 bg-gray-200 rounded px-2" type="text" placeholder="d2">
+                        <p class="px-2">cm</p>
+                    </div>
                       <div class="card-actions mt-8">
-                        <button class="btn btn-info w-52">Calculate</button>
+                        <button id="btn-rhombus" class="btn btn-info w-52">Calculate</button>
                       </div>
                     </div>
                   </div>
@@ -108,6 +120,12 @@
                       <h2 class="card-title">Pentagon</h2>
                       <p>Area(A) = 0.5&#215;p&#215;b</p>
                       <p>p=6cm, b=10cm</p>
+                      <div class="flex">
+                        <input id="rectangle-width" class="w-14 bg-gray-200 rounded px-2" type="text" placeholder="p">
+                        <p class="px-2">cm</p>
+                        <input id="rectangle-length" class="w-14 bg-gray-200 rounded px-2" type="text" placeholder="b">
+                        <p class="px-2">cm</p>
+                    </div>
                       <div class="card-actions mt-8">
                         <button class="btn btn-info w-52">Calculate</button>
                       </div>
@@ -121,7 +139,13 @@
                     <div class="card-body items-center text-center">
                       <h2 class="card-title">Ellipse</h2>
                       <p>Area(A) = &pi;ab</p>
-                      <p>p=10cm, b=4cm</p>
+                      <p>a=10cm, b=4cm</p>
+                      <div class="flex">
+                        <input id="rectangle-width" class="w-14 bg-gray-200 rounded px-2" type="text" placeholder="a">
+                        <p class="px-2">cm</p>
+                        <input id="rectangle-length" class="w-14 bg-gray-200 rounded px-2" type="text" placeholder="b">
+                        <p class="px-2">cm</p>
+                    </div>
                       <div class="card-actions mt-8">
                         <button class="btn btn-info w-52 ">Calculate</button>
                       </div>
@@ -138,15 +162,7 @@
                       <table class="table w-24">
                                               
                         <tbody id="table-container">
-                          <!-- row 1 -->
-                          
-                          <!-- row 2 -->
-                          <tr>
-                            <th></th>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                          </tr>
+                         
                           
                         </tbody>
                       </table>
