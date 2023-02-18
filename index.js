@@ -8,13 +8,13 @@ document.getElementById('btn-triangle').addEventListener('click',function(){
     const base = getInputValue('triangle-base');
     const height = getInputValue('triangle-height');
     
-   
-    
-    
     const triangleArea = 0.5 * parseFloat(base) * parseFloat(height);
     if(isNaN(triangleArea)){
         alert ('Please provide a valid number');
         return false;
+    }
+    else if(triangleArea<0){
+        alert('Please provide a valid number');
     }
     else{
         triangleArea;
@@ -37,6 +37,9 @@ document.getElementById('btn-rectangle').addEventListener('click',function(){
     alert ('Please provide a valid number');
     return false;
 }
+else if(rectangleArea<0){
+    alert('Please provide a valid number');
+}
 else{
     rectangleArea;
 }
@@ -55,6 +58,9 @@ document.getElementById('btn-Parallelogram').addEventListener('click',function()
     if(isNaN(parallelogramArea)){
         alert ('Please provide a valid number');
         return false;
+    }
+    else if(parallelogramArea<0){
+        alert('Please provide a valid number');
     }
     else{
         parallelogramArea;
@@ -75,6 +81,9 @@ document.getElementById('btn-Parallelogram').addEventListener('click',function()
         alert ('Please provide a valid number');
         return false;
     }
+    else if(rhombusArea<0){
+        alert('Please provide a valid number');
+    }
     else{
         rhombusArea;
     }
@@ -93,6 +102,9 @@ document.getElementById('btn-Parallelogram').addEventListener('click',function()
     if(isNaN(pentagonArea)){
         alert ('Please provide a valid number');
         return false;
+    }
+    else if(pentagonArea<0){
+        alert('Please provide a valid number');
     }
     else{
         pentagonArea;
@@ -116,6 +128,9 @@ document.getElementById('btn-Parallelogram').addEventListener('click',function()
         alert ('Please provide a valid number');
         return false;
     }
+    else if(ellipseArea<0){
+        alert('Please provide a valid number');
+    }
     else{
         ellipseArea;
     }
@@ -129,7 +144,8 @@ document.getElementById('btn-Parallelogram').addEventListener('click',function()
     tr.innerHTML =`
     <td>${x}</td>
     <td>${triangle}</td>
-    <td>${triangleArea}cm<sup>2</sup></td>
+    <td>${triangleArea}cm<sup>2</sup>&nbsp;<button class="bg-sky-400 rounded">Convert to m<sup>2</sup></button></td>
+    
     
         
     `
